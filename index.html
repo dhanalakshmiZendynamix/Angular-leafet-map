@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en"  ng-app="directivesModule">
+<head>
+    <meta charset="UTF-8">
+    <title>ZD Maps</title>
+</head>
+
+<body>
+
+<h3>zendynamix Map Directive</h3>
+
+<div id="wrapper" ng-controller="mapController">
+
+    <span id="map1">
+
+        <!--tile-layer="bing"-->
+        <div><h5> map with custom marker</h5></div>
+
+        <zd-map map-id="indexmap"  latitude=51.505 longitude=-0.09 zoom=6 markers=markerArray polyline=polylineArray   marker-configuration=markerConfiguration
+               polyline-configuration=polylineConfiguration map-height="500" map-width="500" tile-layer="osm"></zd-map>
+
+    </span>
+    <span id="map2">
+      <!--  markers=bangaloreMarkerArray-->
+         <div><h5> map with polygon</h5></div>
+        <zd-map map-id="secondmap"  latitude=12.9542944 longitude=77.4905117 zoom=12
+
+                map-height="500" map-width="500"   polygon=polygon tile-layer="osm" polygon-configuration=polygonConfiguration></zd-map>
+    </span>
+
+
+    <!--map cluster   tile-layer="osm" -->
+    <span id="map3">
+        <div><h5> map with marker cluster</h5></div>
+        <zd-map map-id="clustermap"  latitude=-6.081689 longitude=145.391881 zoom=4  marker-cluster=markerCluster map-height="500" map-width="500" tile-layer="osm"></zd-map>
+    </span>
+
+
+
+
+    <span id="map4">
+        <div><h5> map with marker cluster</h5></div>
+        <zd-map map-id="map4"  latitude=-6.081689 longitude=145.391881 zoom=4   map-height="500" map-width="500" tile-layer="bingAerial"></zd-map>
+    </span>
+    <span id="map5">
+
+        <div><h5> map with marker cluster</h5></div>
+        <zd-map map-id="map5"  latitude=-6.081689 longitude=145.391881 zoom=4  map-height="500" map-width="500" tile-layer="bingRoad"></zd-map>
+    </span>
+
+    <span id="map6">
+        <div><h5> map with marker cluster</h5></div>
+        <zd-map map-id="map6"  latitude=-6.081689 longitude=145.391881 zoom=4 map-height="500" map-width="500" tile-layer="bingAerialWithLabels"></zd-map>
+    </span>
+
+    <span id="map7">
+        <div><h5> map with marker cluster</h5></div>
+        <zd-map map-id="map7"  latitude=-6.081689 longitude=145.391881 zoom=4 map-height="500" map-width="500" tile-layer="googleMaps"></zd-map>
+    </span>
+
+</div>
+
+
+<script src="js/angular.js"></script>
+<script src="js/mapController.js"></script>
+<script src="js/map.js"></script>
+<script src="js/service/markerSettingsService.js"></script>
+<script src="js/helperService.js"></script>
+<script src="js/service/mapSettingsService.js"></script>
+<script src="js/service/polylineSettingService.js"></script>
+<script src="js/service/polygonSettingService.js"></script>
+<link rel="stylesheet" href="css/style.css" />
+
+
+<!--map clustering-->
+
+<link rel="stylesheet" type="text/css" href="malibs/css/leafletv0.7.7.css" />
+<link rel="stylesheet" type="text/css" href="malibs/css/MarkerCluster.Default0.4.0.css" />
+<link rel="stylesheet" type="text/css" href="malibs/css/MarkerClusters0.4.0.css" />
+
+<script type='text/javascript' src='malibs/jquerymin.js'></script>
+<script type='text/javascript' src='malibs/leaflet.js'></script>
+<script type='text/javascript' src='malibs/leaflet.markercluster.js'></script>
+<script src="malibs/bingLayer.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbUGvpUJn8JdZFlrXn2krev5dWYhRSZV8"></script>
+<script src="http://matchingnotes.com/javascripts/leaflet-google.js"></script>
+</body>
+</html>

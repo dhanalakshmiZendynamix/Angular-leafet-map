@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en"  ng-app="directivesModule">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+</head>
+<body>
+
+<h3>zendynamix Map Directive</h3>
+<zd-map map-id="indexmap"  latitude=51.505 longitude=-0.09 zoom=13 ></zd-map>
+<zd-map map-id="secondmap"  latitude=12.9542944 longitude=77.4905117 zoom=8 style ="float: right" ></zd-map>
+
+
+<script src="scripts/angular.js"></script>
+<script>
+
+    (function() {
+        var zdMap =  function() {
+
+            var template = '<div id="{{mapId}}"  style="width: 500px;height: 500px "> </div>'
+            function link(scope, elem, attrs) {
+                elem.ready(function () {
+                    initMap(scope.latitude,scope.longitude,scope.zoom,scope.mapId)
+                })
+
+
+            }
+
+            function initMap(latitude,longitude,zoom,mapId) {
+                var mymap = L.map(mapId).setView([latitude,longitude], zoom);
+                L.tileLayer('http://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
+                    attribution: '&copy; Openstreetmap France | &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+                }).addTo(mymap);
+            }
+            return {
+                scope: {
+                    mapId:'@',
+                    latitude:'@',
+                    longitude:'@',
+                    zoom:'@'
+                },
+                link: link,
+                template: template
+            };
+        };
+
+
+
+
+        angular.module('directivesModule', [])
+                .directive('zdMap', zdMap);
+
+    }());
+
+
+
+</script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
+
+</body>
+</html>
