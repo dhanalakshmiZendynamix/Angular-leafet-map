@@ -6,7 +6,7 @@
 #map1 {
 
     float:left; /* add this */
-    border: 1px solid red;
+    border: 1px solid green;
 }
 #map2 {
     border: 1px solid green;
@@ -16,7 +16,11 @@
     border: 1px solid green;
     float: left; /* add this */
 }
+.text{
+    margin-top: 150px;
+}
 #map4{
+
     border: 1px solid green;
     float: left; /* add this */
 }
@@ -29,6 +33,15 @@
     float: left; /* add this */
 }
 #map7{
+    border: 1px solid green;
+    float: left; /* add this */
+}
+
+#map8{
+    border: 1px solid green;
+    float: left; /* add this */
+}
+#map9{
     border: 1px solid green;
     float: left; /* add this */
 }

@@ -2,7 +2,7 @@
  * Created by dhanalakshmi on 29/10/16.
  */
 
-app.directive('zdMap', function(markerSettingService,helperService,mapSettingService,polylineSettingService,polygonSettingService) {
+app.directive('angularMap', function(markerSettingService,helperService,mapSettingService,polylineSettingService,polygonSettingService) {
 
     var mymap;
 
@@ -16,8 +16,21 @@ app.directive('zdMap', function(markerSettingService,helperService,mapSettingSer
                 height:  scope.mapHeight,
                 width:scope.mapWidth
             })
+            if(!scope.imageTile && scope.mapId){
+                initMap(scope.latitude,scope.longitude,scope.zoom,scope.mapId,scope.tileLayer)
+            }
 
-            initMap(scope.latitude,scope.longitude,scope.zoom,scope.mapId,scope.tileLayer)
+            if(scope.imageTile && scope.mapId){
+                initStaticImageMap(scope.imageTile,scope.mapId)
+
+            }
+
+           /* if(scope.circleLatLng){
+                drawCircle(scope.circleLatLng)
+
+            }*/
+
+
             if(scope.markers){
                 if(scope.markerConfiguration){
                     markerSettingService.setDefaultMarker(false);
@@ -68,8 +81,25 @@ app.directive('zdMap', function(markerSettingService,helperService,mapSettingSer
                 addMarkerCluster(scope.markerCluster)
             }
 
+
         })
 
+
+    }
+
+    function initStaticImageMap(staticImage,mapId){
+         mymap = L.map(mapId, {
+            maxZoom: 24,
+            minZoom: 1,
+            crs: L.CRS.Simple
+        }).setView([0, 0], 1);
+
+        mymap.setMaxBounds(new L.LatLngBounds([0,600], [600,0]));
+
+        var imageUrl = staticImage
+        var imageBounds = [[300,0], [0,300]];
+
+        L.imageOverlay(imageUrl, imageBounds).addTo(mymap);
 
     }
 
@@ -103,8 +133,18 @@ app.directive('zdMap', function(markerSettingService,helperService,mapSettingSer
 
     }
 
+    function drawCircle(latLng){
+
+        var circle = L.circle([latLng.lat,latLng.lng], {
+            color: 'red',
+            fillColor: '#f03',
+            fillOpacity: 0.5,
+            radius: 500
+        }).addTo(mymap);
+    }
 
     function initMap(latitude,longitude,zoom,mapId,tileLayerName) {
+        /*fullscreenControl: true*/
         mymap = L.map(mapId).setView([latitude,longitude], zoom);
         var mapOptions={
             titleLayer:{
@@ -114,7 +154,8 @@ app.directive('zdMap', function(markerSettingService,helperService,mapSettingSer
                 "bingAerialWithLabels":new L.BingLayer("AuhiCJHlGzhg93IqUH_oCpl_-ZUrIE6SPftlyGYUvr9Amx5nzA-WqGcPquyFZl4L", {type: 'AerialWithLabels'}),
                 "bingAerial":new L.BingLayer("AuhiCJHlGzhg93IqUH_oCpl_-ZUrIE6SPftlyGYUvr9Amx5nzA-WqGcPquyFZl4L", {type: 'Aerial'}),
                 "bingRoad":new L.BingLayer("AuhiCJHlGzhg93IqUH_oCpl_-ZUrIE6SPftlyGYUvr9Amx5nzA-WqGcPquyFZl4L", {type: 'Road'}),
-                "googleMaps":new L.Google('ROADMAP')
+                "googleMaps":new L.Google('ROADMAP'),
+                "stamenBackWhite": new L.tileLayer("http://{s}.tile.stamen.com/toner/{z}/{x}/{y}.png")
             }
         }
 
@@ -207,7 +248,6 @@ function addMarkerCluster(markers){
             latitude:'@',
             longitude:'@',
             zoom:'@',
-            addCustomMarkers:'@',
             markers:'=',
             polygon:'=',
             polyline:'=',
@@ -218,6 +258,8 @@ function addMarkerCluster(markers){
             markerCluster:'=',
             mapHeight:"@",
             mapWidth:"@",
+            imageTile:"=",
+            circleLatLng:"="
 
 
 

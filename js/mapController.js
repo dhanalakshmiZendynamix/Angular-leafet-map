@@ -11,6 +11,10 @@ app.controller('mapController', [ '$scope', function($scope) {
             "iconHeight":30
     }
 
+
+
+
+
 $scope.markerArray=[
     {
         lat:51.505,
@@ -33,12 +37,17 @@ $scope.markerArray=[
         }
     ]
 
+    $scope.rectangle=[
+        [-19.405818,125.432876],
+        [-21.024102,141.365141],
+        [-32.121982,141.835481],
+        [-29.882498,122.969594]
+    ]
     $scope.polygon=[
         [12.989086,77.506553],
         [13.018126,77.670686],
         [12.894383,77.601683]
     ]
-
 
     $scope.polylineArray=[[{
         lat:51.489835,
@@ -69,6 +78,14 @@ $scope.markerArray=[
         fillColor:"blue",
         opacity:0.4
     }
+
+    $scope.staticImageTitle='http://www.lib.utexas.edu/maps/historical/newark_nj_1922.jpg';
+
+    $scope.circleLatLng={
+        lat:-6.081689,
+        lng:145.391881
+}
+
     $scope.markerCluster= [
         {
             "name":"Goroka",

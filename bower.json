@@ -1,0 +1,16 @@
+{
+  "name": "ZDmaps",
+  "authors": [
+    "dhanalakshmi"
+  ],
+  "description": "angular directive for leafletmap",
+  "main": "index.js",
+  "keywords": [
+    "angular",
+    "directive",
+    "leaflet",
+    "map"
+  ],
+  "license": "MIT",
+  "homepage": "index.html"
+}
