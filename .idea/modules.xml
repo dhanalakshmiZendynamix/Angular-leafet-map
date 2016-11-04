@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ZDmapDirective.iml" filepath="$PROJECT_DIR$/ZDmapDirective.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leaflet-angular-map-directive.iml" filepath="$PROJECT_DIR$/leaflet-angular-map-directive.iml" />
     </modules>
   </component>
 </project>

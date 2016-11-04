@@ -2,7 +2,7 @@
  * Created by dhanalakshmi on 29/10/16.
  */
 
-app.directive('angularMap', function(markerSettingService,helperService,mapSettingService,polylineSettingService,polygonSettingService) {
+app.directive('angularMap', function(markerSettingService,helperService,polylineSettingService,polygonSettingService) {
 
     var mymap;
 

@@ -1,16 +1,17 @@
 {
-  "name": "ZDmaps",
+  "name": "angualar map",
+  "homepage": "https://github.com/dhanalakshmiZendynamix/Angular-leafet-map",
   "authors": [
-    "dhanalakshmi"
+    "dhanalakshmi <dhanalakshmi@zendynamix.com>"
   ],
-  "description": "angular directive for leafletmap",
-  "main": "index.js",
-  "keywords": [
-    "angular",
-    "directive",
-    "leaflet",
-    "map"
-  ],
+  "description": "",
+  "main": "",
   "license": "MIT",
-  "homepage": "index.html"
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
 }
