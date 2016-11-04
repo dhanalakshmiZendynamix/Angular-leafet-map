@@ -22,8 +22,12 @@
     float: left; /* add this */
     width: 33%;
 }
+
 .text{
     margin-top: 150px;
+}
+.clear{
+    clear: both;
 }
 #map4{
 
@@ -57,3 +61,8 @@
     float: left; /* add this */
     width: 33%;
 }
+/*
+span{
+    display: block;
+    overflow: hidden;
+}*/
