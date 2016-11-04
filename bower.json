@@ -1,17 +1,25 @@
 {
-  "name": "angualar map",
+  "name": "leaflet-angular-map-directive",
   "homepage": "https://github.com/dhanalakshmiZendynamix/Angular-leafet-map",
   "authors": [
-    "dhanalakshmi <dhanalakshmi@zendynamix.com>"
+    "Dhanalakshmi"
   ],
-  "description": "",
-  "main": "",
+  "version": "1.0",
+  "description": "angular directive for leaflet map api",
+  "main": "index.html",
   "license": "MIT",
   "ignore": [
     "**/.*",
     "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ]
+    "bower_components"
+  ],
+  "keywords": [
+    "javascript",
+    "lealfet",
+    "angularjs",
+    "directive"
+  ],
+  "dependencies": {
+    "angular": "1.x"
+  }
 }
