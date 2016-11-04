@@ -35,8 +35,8 @@ Map with markers
 
 | Attribute | Type | Sampelvalue | Defalut value | Description |
 | --- | --- | --- | --- | --- |
-| markers |  Array of object | ```json [{ **lat** :51.505, **lng** :0.09},{        **lat** :51.605, **lng** :-0.09}]```  | none | Array Of latitude longitude objects |
-| marker-configuration | object |```json  {   &quot;iconUrl&quot; :&quot;iconImage/Icons-Land-Vista-Map-Markers-Map-Marker-Marker-Inside-Chartreuse.ico&quot; ,       &quot;iconWidth&quot; :30,       &quot;iconHeight&quot;:30} ``` | none | IconUrl=custom marker absolute path iconWidth=marker width iconHeight=maker Height |
+| markers |  Array of object |  [{ **lat** :51.505, **lng** :0.09},{        **lat** :51.605, **lng** :-0.09}]  | none | Array Of latitude longitude objects |
+| marker-configuration | object |  {   &quot;iconUrl&quot; :&quot;iconImage/Icons-Land-Vista-Map-Markers-Map-Marker-Marker-Inside-Chartreuse.ico&quot; ,       &quot;iconWidth&quot; :30,       &quot;iconHeight&quot;:30}  | none | IconUrl=custom marker absolute path iconWidth=marker width iconHeight=maker Height |
 
 Map with polygon
 
@@ -67,7 +67,7 @@ Map with marker Cluster
 
 Map with static image as base layer
 
-&lt; **angular-map map-id=&quot;map9&quot;  image-tile = staticImageTitle   map-height= &quot;500&quot;map-  width=&quot;603&quot; **&gt;&lt;/** angular-map**&gt;
+&lt; **angular-map map-id=&quot;map9&quot;  image-tile = staticImageTitle   map-height= &quot;500&quot;map-  width=&quot;603&quot; &gt;&lt;/ angular-map**&gt;
 
 | Attribute | Type | Sampelvalue | Defalut value | Description |
 | --- | --- | --- | --- | --- |
