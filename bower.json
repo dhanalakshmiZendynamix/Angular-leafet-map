@@ -20,6 +20,7 @@
     "directive"
   ],
   "dependencies": {
-    "angular": "1.x"
+    "angular": "1.x",
+    "leaflet": "0.7.x"
   }
 }
