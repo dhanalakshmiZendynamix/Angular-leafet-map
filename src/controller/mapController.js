@@ -2,7 +2,7 @@
  * Created by dhanalakshmi on 29/10/16.
  */
 
-var app = angular.module("directivesModule", []);
+var app = angular.module("angular-leaflet-map", []);
 
 app.controller('mapController', [ '$scope', function($scope) {
     $scope.markerConfiguration={
