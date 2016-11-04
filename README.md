@@ -1,6 +1,21 @@
+### leaflet-angular-map-directive
+
+## Description
+leafet-angular-map-directive allows  to use leaflet map library API in  AngularJS application  providing the directive attribute value in AngularJS scope. In its current state, it's not a full-featured library, but it's easy to use and extend 
+
+## How to use it
+
+```
+bower install angular-map
+```
+
+Include the `angular-leaflet-map` dependency on your Angular module:
+```
+var app = angular.module('demoapp', ['angular-leaflet-map']);
+```
 
 
-Basic  map
+Finally, define  the basic configuration of the map as attibutes below
 
 &lt; **angular-map**  **map-id=****&quot;unqiueMapId&quot;  latitude= 51.505 longitude= -0.09 zoom= 6  map-height= &quot;500&quot;map-width=&quot;603&quot;  tile-layer= &quot;osm&quot;** &gt;&lt;/ **angular-map** &gt;
 
@@ -20,8 +35,8 @@ Map with markers
 
 | Attribute | Type | Sampelvalue | Defalut value | Description |
 | --- | --- | --- | --- | --- |
-| markers |  Array of object | [{ **lat** :51.505, **lng** :0.09},{        **lat** :51.605, **lng** :-0.09}]  | none | Array Of latitude longitude objects |
-| marker-configuration | object | {   &quot;iconUrl&quot; :&quot;iconImage/Icons-Land-Vista-Map-Markers-Map-Marker-Marker-Inside-Chartreuse.ico&quot; ,       &quot;iconWidth&quot; :30,       &quot;iconHeight&quot;:30}  | none | IconUrl=custom marker absolute path iconWidth=marker width iconHeight=maker Height |
+| markers |  Array of object |  [{ **lat** :51.505, **lng** :0.09},{        **lat** :51.605, **lng** :-0.09}]  | none | Array Of latitude longitude objects |
+| marker-configuration | object |  {   &quot;iconUrl&quot; :&quot;iconImage/Icons-Land-Vista-Map-Markers-Map-Marker-Marker-Inside-Chartreuse.ico&quot; ,       &quot;iconWidth&quot; :30,       &quot;iconHeight&quot;:30}  | none | IconUrl=custom marker absolute path iconWidth=marker width iconHeight=maker Height |
 
 Map with polygon
 
@@ -52,7 +67,7 @@ Map with marker Cluster
 
 Map with static image as base layer
 
-&lt; **angular-map map-id=&quot;map9&quot;  image-tile = staticImageTitle   map-height= &quot;500&quot;map-  width=&quot;603&quot; **&gt;&lt;/** angular-map**&gt;
+&lt; **angular-map map-id=&quot;map9&quot;  image-tile = staticImageTitle   map-height= &quot;500&quot;map-  width=&quot;603&quot; &gt;&lt;/ angular-map**&gt;
 
 | Attribute | Type | Sampelvalue | Defalut value | Description |
 | --- | --- | --- | --- | --- |
