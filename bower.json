@@ -21,6 +21,7 @@
   ],
   "dependencies": {
     "angular": "1.x",
-    "leaflet": "0.7.x"
+    "leaflet": "0.7.x",
+    "leaflet-marker-cluster":"https://unpkg.com/leaflet.markercluster@1.0.0/dist/"
   }
 }
