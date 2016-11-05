@@ -6,7 +6,7 @@ leafet-angular-map-directive allows  to use leaflet map library API in  AngularJ
 ## How to use it
 
 ```
-bower install angular-map
+bower install leaflet-angular-map-directive
 ```
 
 Include the `angular-leaflet-map` dependency on your Angular module:
