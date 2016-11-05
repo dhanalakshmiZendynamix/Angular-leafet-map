@@ -1,7 +1,7 @@
 ### leaflet-angular-map-directive
 
 ## Description
-leafet-angular-map-directive allows  to use leaflet map library API in  AngularJS application  providing the directive attribute value in AngularJS scope. In its current state, it's not a full-featured library, but it's easy to use and extend 
+leaflet-angular-map-directive allows  to use leaflet map library API in  AngularJS application  providing the directive attribute value in AngularJS scope. In its current state, it's not a full-featured library, but it's easy to use and extend 
 
 ## How to use it
 
@@ -73,7 +73,7 @@ var app = angular.module('demoapp', ['angular-leaflet-map']);
 | markers |  Array of object |  [{ **lat** :51.505, **lng** :0.09},{        **lat** :51.605, **lng** :-0.09}]  | none | Array Of latitude longitude objects |
 | marker-configuration | object |  {   &quot;iconUrl&quot; :&quot;iconImage/Icons-Land-Vista-Map-Markers-Map-Marker-Marker-Inside-Chartreuse.ico&quot; ,       &quot;iconWidth&quot; :30,       &quot;iconHeight&quot;:30}  | none | IconUrl=custom marker absolute path iconWidth=marker width iconHeight=maker Height |
 
-## Map with polygon
+## Map with polyline
 
 ```
 <angular-map map-id="indexmapPolygon"  latitude=51.505 longitude=-0.09 zoom=6  map-height="500" map-width="603" tile-layer="osm" polyline=polylineArray  polyline-configuration=polylineConfiguration></angular-map>
