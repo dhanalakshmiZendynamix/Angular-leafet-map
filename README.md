@@ -1,4 +1,4 @@
-### leaflet-angular-map-directive
+# leaflet-angular-map-directive
 
 ## Description
 leaflet-angular-map-directive allows  to use leaflet map library API in  AngularJS application  providing the directive attribute value in AngularJS scope. In its current state, it's not a full-featured library, but it's easy to use and extend 
